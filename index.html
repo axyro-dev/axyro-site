@@ -1,46 +1,333 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>AXYRO</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AXYRO — Systems • Infrastructure • Compute</title>
+  <meta name="description" content="AXYRO builds systems, infrastructure and compute environments. EU / Hungary." />
+  <meta property="og:title" content="AXYRO" />
+  <meta property="og:description" content="Systems • Infrastructure • Compute — EU / Hungary" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg0:#05070c;
+      --bg1:#070b16;
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,.72);
+      --line:rgba(234,240,255,.12);
+      --cyan:#4CE1D1;
+      --blue:#5aa7ff;
+      --glow: 0 0 28px rgba(76,225,209,.20), 0 0 70px rgba(90,167,255,.14);
+      --card: rgba(255,255,255,.04);
+      --card2: rgba(255,255,255,.06);
+    }
 
-<style>
-body{
-background:#0b0f14;
-color:white;
-font-family:Arial;
-text-align:center;
-padding-top:120px;
-}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 700px at 20% 10%, rgba(76,225,209,.16), transparent 55%),
+        radial-gradient(900px 700px at 85% 25%, rgba(90,167,255,.16), transparent 55%),
+        radial-gradient(1200px 900px at 50% 120%, rgba(76,225,209,.08), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
 
-h1{
-font-size:48px;
-letter-spacing:2px;
-}
+    .grid{
+      position:fixed; inset:0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse at 50% 20%, rgba(0,0,0,.95), transparent 70%);
+      pointer-events:none;
+      opacity:.35;
+    }
 
-p{
-color:#9aa4b2;
-font-size:18px;
-}
+    .noise{
+      position:fixed; inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+      mix-blend-mode:overlay;
+      opacity:.18;
+      pointer-events:none;
+    }
 
-a{
-color:#4da3ff;
-text-decoration:none;
-}
-</style>
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 32px 18px;
+      position:relative;
+    }
 
+    .container{
+      width:min(980px, 100%);
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 10px 2px 22px 2px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(255,255,255,.03);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border-radius: 20px;
+      padding: 34px 26px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.45);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 35% 18%, rgba(76,225,209,.22), transparent 60%),
+        radial-gradient(480px 240px at 72% 22%, rgba(90,167,255,.20), transparent 60%);
+      opacity:.9;
+      pointer-events:none;
+      filter: blur(10px);
+    }
+
+    .hero-inner{
+      position:relative;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items:center;
+    }
+
+    @media (max-width: 840px){
+      .hero-inner{ grid-template-columns: 1fr; }
+    }
+
+    .brand{
+      display:flex;
+      gap: 18px;
+      align-items:center;
+    }
+
+    .logo{
+      width: 84px;
+      height: 84px;
+      border-radius: 18px;
+      display:grid;
+      place-items:center;
+      background: rgba(0,0,0,.40);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: var(--glow);
+      overflow:hidden;
+    }
+
+    .logo img{
+      width: 62px;
+      height: 62px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 10px rgba(76,225,209,.20));
+    }
+
+    h1{
+      margin:0;
+      font-size: 52px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      line-height:1.0;
+    }
+
+    .tagline{
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 16px;
+      letter-spacing: .02em;
+    }
+
+    .meta{
+      margin-top: 18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .cta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top: 22px;
+    }
+
+    a.btn{
+      text-decoration:none;
+      color: var(--text);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+      backdrop-filter: blur(10px);
+    }
+    a.btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(76,225,209,.45);
+      background: rgba(255,255,255,.06);
+    }
+
+    .panel{
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.22);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .panel h2{
+      margin:0 0 10px 0;
+      font-size: 14px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(234,240,255,.75);
+    }
+
+    .list{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+
+    .item{
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+    }
+
+    .item .t{
+      font-weight: 700;
+      letter-spacing:.02em;
+    }
+    .item .d{
+      margin-top:6px;
+      color: rgba(234,240,255,.70);
+      font-size: 13px;
+      line-height:1.35;
+    }
+
+    .footer{
+      margin-top: 16px;
+      color: rgba(234,240,255,.55);
+      font-size: 12px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      padding: 0 6px;
+    }
+
+    .kbd{
+      border:1px solid rgba(255,255,255,.14);
+      padding:2px 8px;
+      border-radius:8px;
+      background: rgba(255,255,255,.03);
+    }
+  </style>
 </head>
-
 <body>
+  <div class="grid"></div>
+  <div class="noise"></div>
 
-<h1>AXYRO</h1>
+  <div class="wrap">
+    <div class="container">
 
-<p>Systems • Infrastructure • Compute</p>
+      <div class="topbar">
+        <div class="pill">AXYRO • EU / Hungary</div>
+        <div class="pill">Status: <span style="color:var(--cyan);font-weight:700">Online</span></div>
+      </div>
 
-<p>EU / Hungary</p>
+      <section class="hero">
+        <div class="hero-inner">
 
-<p>
-<a href="https://github.com/axyro-dev">GitHub</a>
-</p>
+          <div>
+            <div class="brand">
+              <div class="logo">
+                <img src="assets/ax-logo.png" alt="AXYRO AX Logo">
+              </div>
+              <div>
+                <h1>AXYRO</h1>
+                <div class="tagline">Systems • Infrastructure • Compute</div>
+                <div class="meta">
+                  <span class="pill">Linux</span>
+                  <span class="pill">Docker</span>
+                  <span class="pill">Infra</span>
+                  <span class="pill">Compute</span>
+                </div>
+              </div>
+            </div>
 
+            <div class="cta">
+              <a class="btn" href="https://github.com/axyro-dev" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn" href="https://github.com/axyro-dev/axyro-infrastructure" target="_blank" rel="noreferrer">Infrastructure</a>
+              <a class="btn" href="https://github.com/axyro-dev/axyro-compute" target="_blank" rel="noreferrer">Compute</a>
+              <a class="btn" href="mailto:hello@axyro.io">hello@axyro.io</a>
+            </div>
+          </div>
+
+          <aside class="panel">
+            <h2>Focus</h2>
+            <ul class="list">
+              <li class="item">
+                <div class="t">Systems Architecture</div>
+                <div class="d">Designing resilient, clean, scalable system blueprints.</div>
+              </li>
+              <li class="item">
+                <div class="t">Infrastructure Engineering</div>
+                <div class="d">Environments, automation, deployment tooling, ops discipline.</div>
+              </li>
+              <li class="item">
+                <div class="t">Compute Environments</div>
+                <div class="d">Benchmarks, tuning, experiments, repeatable setups.</div>
+              </li>
+            </ul>
+          </aside>
+
+        </div>
+      </section>
+
+      <div class="footer">
+        <div>© <span id="y"></span> AXYRO</div>
+        <div><span class="kbd">axyro.io</span> → GitHub Pages</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
