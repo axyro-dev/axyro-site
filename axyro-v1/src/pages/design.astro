@@ -1,0 +1,365 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Design Language — AXYRO">
+  <main class="design-page">
+    <section class="hero">
+      <p class="eyebrow">AXYRO DESIGN LANGUAGE</p>
+
+      <h1>
+        Design<br />
+        Language
+      </h1>
+
+      <p class="sub">
+        A visual system built around restraint,
+        atmosphere and focused compute.
+      </p>
+
+      <span class="phase">
+        DESIGN SYSTEM / EARTH PHASE
+      </span>
+    </section>
+
+    <section class="systems">
+      <article class="system">
+        <span>01</span>
+
+        <h2>Atmosphere</h2>
+
+        <p>
+          Darkness behaves as material rather than decoration.
+          Space, silence and restrained light define the environment layer.
+        </p>
+      </article>
+
+      <article class="system">
+        <span>02</span>
+
+        <h2>Typography</h2>
+
+        <p>
+          Typography remains calm, precise and structural.
+          Weight, spacing and rhythm replace visual aggression.
+        </p>
+      </article>
+
+      <article class="system">
+        <span>03</span>
+
+        <h2>Material</h2>
+
+        <p>
+          Surfaces use subtle pressure, diffusion and layered darkness
+          instead of visible effects or heavy glassmorphism.
+        </p>
+      </article>
+
+      <article class="system">
+        <span>04</span>
+
+        <h2>Motion</h2>
+
+        <p>
+          Motion should feel infrastructural and quiet.
+          Transitions support orientation without demanding attention.
+        </p>
+      </article>
+    </section>
+
+    <section class="principles">
+      <div class="left">
+        <p class="eyebrow">PRINCIPLES</p>
+
+        <h2>
+          Calm systems.<br />
+          Focused compute.
+        </h2>
+      </div>
+
+      <div class="right">
+        <p>
+          AXYRO avoids visual noise, artificial futurism and interface excess.
+        </p>
+
+        <p>
+          The system is designed to feel grounded, believable and operational.
+        </p>
+
+        <p>
+          Every visual layer should support cognitive clarity rather than stimulation.
+        </p>
+      </div>
+    </section>
+
+    <section class="notes">
+      <div class="line"></div>
+
+      <span>
+        DESIGN SYSTEM / EARTH PHASE
+      </span>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .design-page {
+    min-height: 100vh;
+
+    background:
+      radial-gradient(
+        circle at 72% 12%,
+        rgba(167,216,255,0.03),
+        transparent 34%
+      ),
+      linear-gradient(
+        180deg,
+        #020407 0%,
+        #030712 100%
+      );
+  }
+
+  .hero {
+    position: relative;
+
+    padding:
+      230px
+      clamp(32px, 7vw, 120px)
+      110px;
+  }
+
+  .eyebrow {
+    margin: 0 0 28px;
+
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+
+    color: rgba(167,216,255,0.76);
+  }
+
+  h1 {
+    margin: 0;
+
+    font-size: clamp(72px, 8vw, 124px);
+    line-height: 0.88;
+    letter-spacing: -0.09em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.98);
+  }
+
+  .sub {
+    margin-top: 34px;
+
+    max-width: 560px;
+
+    font-size: 19px;
+    line-height: 1.72;
+
+    color: rgba(245,247,250,0.56);
+  }
+
+  .phase {
+    display: inline-flex;
+
+    margin-top: 58px;
+
+    font-size: 10px;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+
+    color: rgba(245,247,250,0.28);
+  }
+
+  .systems {
+    padding:
+      0
+      clamp(32px, 7vw, 120px)
+      130px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+  }
+
+  .system {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 34px;
+
+    border-radius: 28px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.018),
+        rgba(255,255,255,0.006)
+      );
+
+    border:
+      1px solid rgba(255,255,255,0.035);
+
+    overflow: hidden;
+  }
+
+  .system::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(167,216,255,0.16),
+        transparent
+      );
+
+    opacity: 0.22;
+  }
+
+  .system span {
+    font-size: 10px;
+    letter-spacing: 0.34em;
+
+    color: rgba(245,247,250,0.26);
+  }
+
+  .system h2 {
+    margin: 26px 0 20px;
+
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.95);
+  }
+
+  .system p {
+    margin: 0;
+
+    max-width: 320px;
+
+    font-size: 16px;
+    line-height: 1.75;
+
+    color: rgba(245,247,250,0.54);
+  }
+
+  .principles {
+    padding:
+      110px
+      clamp(32px, 7vw, 120px)
+      150px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+
+    gap: 120px;
+
+    border-top:
+      1px solid rgba(255,255,255,0.035);
+  }
+
+  .principles h2 {
+    margin: 0;
+
+    font-size: clamp(48px, 5vw, 82px);
+    line-height: 0.92;
+    letter-spacing: -0.085em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.96);
+  }
+
+  .right p {
+    margin: 0 0 32px;
+
+    max-width: 620px;
+
+    font-size: 18px;
+    line-height: 1.82;
+
+    color: rgba(245,247,250,0.56);
+  }
+
+  .notes {
+    padding:
+      0
+      clamp(32px, 7vw, 120px)
+      72px;
+  }
+
+  .line {
+    width: 100%;
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(167,216,255,0.14),
+        transparent
+      );
+
+    opacity: 0.22;
+  }
+
+  .notes span {
+    display: inline-flex;
+
+    margin-top: 28px;
+
+    font-size: 10px;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+
+    color: rgba(245,247,250,0.22);
+  }
+
+  @media (max-width: 1200px) {
+    .systems {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .principles {
+      grid-template-columns: 1fr;
+      gap: 72px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .hero {
+      padding:
+        170px
+        24px
+        92px;
+    }
+
+    .systems,
+    .principles,
+    .notes {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .systems {
+      grid-template-columns: 1fr;
+    }
+
+    h1 {
+      font-size: clamp(58px, 14vw, 84px);
+    }
+  }
+</style>

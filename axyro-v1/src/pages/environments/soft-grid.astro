@@ -1,0 +1,91 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import EnvironmentHero from "../../components/EnvironmentHero.astro";
+import EnvironmentDownload from "../../components/EnvironmentDownload.astro";
+---
+
+<MainLayout title="Soft Grid — AXYRO">
+  <EnvironmentHero
+    type="NORMAL / PHASE 1"
+    title="Soft Grid"
+    subtitle="A structured environment for quiet workflows, restrained systems and focused clarity."
+    image="/images/env-grid.png"
+  />
+
+  <section class="philosophy">
+    <div class="left">
+      <p class="label">SYSTEM NOTE</p>
+
+      <h2>
+        Structure guides<br />
+        attention.
+      </h2>
+    </div>
+
+    <div class="right">
+      <p>
+        Soft Grid was designed around subtle structure:
+        visible organization without visual pressure.
+      </p>
+
+      <p>
+        The environment introduces restrained computational geometry
+        to support focus, rhythm and calm navigation.
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="intro">
+      <p class="label">SYSTEM CHARACTERISTICS</p>
+
+      <h2>
+        Built for
+        structured calm.
+      </h2>
+    </div>
+
+    <div class="grid">
+      <div class="item">
+        <h3>Subtle geometry</h3>
+
+        <p>
+          Structural lines remain quiet and atmospheric rather than technical or aggressive.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Guided rhythm</h3>
+
+        <p>
+          Spatial alignment creates a calmer and more readable workflow environment.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Restrained systems</h3>
+
+        <p>
+          The environment avoids visual clutter while preserving operational structure.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Focused navigation</h3>
+
+        <p>
+          Quiet grid behavior supports orientation and sustained concentration.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <EnvironmentDownload
+    title="Soft Grid"
+    subtitle="Designed for structured workflows, calm operational systems and focused digital environments."
+  />
+</MainLayout>
+
+<style>
+  @import "../../styles/environment.css";
+</style>

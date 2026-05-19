@@ -1,0 +1,316 @@
+<section class="hero reveal">
+  <div class="hero-bg"></div>
+  <div class="haze"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow">Focused. Precise. Calm.</p>
+
+    <h1>
+      Calm compute<br />
+      environments.
+    </h1>
+
+    <p class="sub">
+      Operational environments designed for clarity, calm and focused work.
+    </p>
+
+    <div class="actions">
+      <a class="primary" href="/support">Support the environments →</a>
+      <a class="secondary" href="/journal">Read the journal</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+
+    min-height: 760px;
+
+    padding-top: 148px;
+
+    display: flex;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    background: #020407;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(2,4,7,0.92) 0%,
+        rgba(2,4,7,0.70) 32%,
+        rgba(2,4,7,0.22) 58%,
+        rgba(2,4,7,0.82) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(2,4,7,0.18) 0%,
+        rgba(2,4,7,0.00) 44%,
+        rgba(2,4,7,0.84) 100%
+      ),
+      url("/images/hero-environment.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter:
+      brightness(0.88)
+      contrast(1.12)
+      saturate(0.86);
+
+    transform: scale(1.012);
+    animation:
+  heroDrift 28s ease-in-out infinite alternate;
+  }
+
+  @keyframes heroDrift {
+  0% {
+    transform:
+      scale(1.01)
+      translate3d(0px, 0px, 0px);
+  }
+
+  100% {
+    transform:
+      scale(1.045)
+      translate3d(-12px, -6px, 0px);
+  }
+}
+
+  .haze {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background:
+      radial-gradient(
+        ellipse at 54% 48%,
+        rgba(167,216,255,0.11),
+        transparent 32%
+      ),
+      radial-gradient(
+        ellipse at 58% 58%,
+        rgba(245,247,250,0.045),
+        transparent 38%
+      ),
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(2,4,7,0.18) 62%,
+        rgba(2,4,7,0.82) 100%
+      );
+
+    opacity: 0.72;
+
+    pointer-events: none;
+  }
+
+  .hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background:
+      radial-gradient(
+        circle at center,
+        transparent 38%,
+        rgba(0,0,0,0.46) 100%
+      );
+
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: 164px;
+    z-index: 2;
+
+    width: 58vw;
+    max-width: 980px;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(167,216,255,0.24),
+        transparent
+      );
+
+    opacity: 0.22;
+
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+
+    width: min(980px, 90vw);
+    max-width: 760px;
+    margin-left: clamp(32px, 7vw, 132px);
+    margin-top: 18px;
+    will-change: transform;
+  }
+
+  .eyebrow {
+    margin: 0 0 30px;
+
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+
+    color: rgba(167,216,255,0.82);
+  }
+
+  h1 {
+    margin: 0;
+   max-width: 720px;
+
+    font-size: clamp(64px, 7vw, 118px);
+    line-height: 0.88;
+    letter-spacing: -0.075em;
+    font-weight: 520;
+
+    color: rgba(245,247,250,0.98);
+  }
+
+  .sub {
+    margin-top: 34px;
+
+    max-width: 560px;
+
+    font-size: 19px;
+    line-height: 1.72;
+
+    color: rgba(245,247,250,0.62);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    margin-top: 54px;
+  }
+
+  .actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 54px;
+    padding: 0 28px;
+
+    border-radius: 999px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition:
+      transform 0.35s ease,
+      background 0.35s ease,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .primary {
+    background: rgba(245,247,250,0.94);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    color: #05070A;
+  }
+
+  .primary:hover {
+    transform: translateY(-1px);
+
+    background: rgba(255,255,255,1);
+
+    box-shadow:
+      0 0 24px rgba(255,255,255,0.08);
+  }
+
+  .secondary {
+    border: 1px solid rgba(255,255,255,0.12);
+
+    color: rgba(245,247,250,0.82);
+
+    background: rgba(255,255,255,0.018);
+  }
+
+  .secondary:hover {
+    transform: translateY(-1px);
+
+    border-color: rgba(167,216,255,0.18);
+
+    background: rgba(255,255,255,0.035);
+  }
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 640px;
+
+    padding-top: 132px;
+  }
+
+  .hero-content {
+    width: calc(100vw - 48px);
+
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  h1 {
+    font-size: clamp(52px, 14vw, 74px);
+
+    line-height: 0.92;
+  }
+
+  .sub {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+}
+</style>
+<script is:inline>
+  const hero = document.querySelector(".hero-content");
+
+  if (hero) {
+    window.addEventListener("scroll", () => {
+      const offset = window.scrollY * 0.12;
+
+      hero.style.transform =
+        `translate3d(0, ${offset}px, 0)`;
+    });
+  }
+</script>

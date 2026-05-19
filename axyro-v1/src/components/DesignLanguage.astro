@@ -1,0 +1,407 @@
+<section class="design-language" id="design">
+ <div class="intro reveal">
+    <p class="eyebrow">DESIGN LANGUAGE</p>
+
+    <h2>
+      A quiet system language<br />
+      for calm compute.
+    </h2>
+
+    <p>
+      AXYRO is built from controlled darkness, restrained light, precise
+      typography and motion that almost disappears.
+    </p>
+
+    <a href="/design">Explore guidelines →</a>
+  </div>
+
+  <div class="cards">
+    <article class="card type-card">
+      <span class="label">Typography</span>
+      <strong>Aa</strong>
+      <p>Mixed system. Aerospace identity. Human readability.</p>
+    </article>
+
+    <article class="card color-card">
+      <span class="label">Light</span>
+
+      <div class="swatches">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+
+      <p>Ion blue as function, not decoration.</p>
+    </article>
+
+    <article class="card material-card">
+      <span class="label">Material</span>
+
+      <div class="surface"></div>
+
+      <p>Dark surfaces with quiet depth and pressure.</p>
+    </article>
+
+    <article class="card motion-card">
+      <span class="label">Motion</span>
+
+      <div class="ring"></div>
+
+      <p>Slow. Inertial. Almost silent.</p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .design-language {
+    position: relative;
+
+    padding:
+      104px
+      clamp(32px, 7vw, 120px)
+      118px;
+
+    display: grid;
+     grid-template-columns: 420px minmax(620px, 1fr);
+    gap: clamp(64px, 8vw, 132px);
+
+    overflow: hidden;
+
+    background:
+      radial-gradient(
+        circle at 78% 28%,
+        rgba(167,216,255,0.04),
+        transparent 34%
+      ),
+      linear-gradient(
+        180deg,
+        #020407 0%,
+        #030712 100%
+      );
+
+    border-top:
+      1px solid rgba(255,255,255,0.045);
+  }
+
+  .design-language::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 52%;
+
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(167,216,255,0.07),
+        transparent
+      );
+
+    opacity: 0.35;
+  }
+
+  .intro {
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow {
+    margin: 0 0 26px;
+
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+
+    color: rgba(167,216,255,0.78);
+  }
+
+  h2 {
+    margin: 0;
+
+    font-size: clamp(48px, 4.8vw, 80px);
+    line-height: 0.92;
+    letter-spacing: -0.085em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.96);
+  }
+
+  .intro p {
+    margin: 32px 0 0;
+
+    max-width: 410px;
+
+    font-size: 18px;
+    line-height: 1.72;
+
+    color: rgba(245,247,250,0.55);
+  }
+
+  .intro a {
+    display: inline-flex;
+
+    margin-top: 34px;
+
+    font-size: 15px;
+    color: rgba(167,216,255,0.82);
+
+    text-decoration: none;
+  }
+
+  .intro a:hover {
+    color: rgba(245,247,250,0.92);
+  }
+
+  .cards {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    gap: 18px;
+
+    align-self: end;
+  }
+
+  .card {
+    position: relative;
+
+    min-height: 270px;
+
+    padding: 26px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.026),
+        rgba(255,255,255,0.006)
+      );
+
+    border:
+      1px solid rgba(255,255,255,0.065);
+  }
+
+  .card::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(167,216,255,0.16),
+        transparent
+      );
+
+    opacity: 0.28;
+  }
+
+  .label {
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+
+    color: rgba(245,247,250,0.48);
+  }
+
+  .card p {
+    position: absolute;
+    left: 26px;
+    right: 26px;
+    bottom: 26px;
+
+    margin: 0;
+
+    font-size: 14.5px;
+    line-height: 1.6;
+
+    color: rgba(245,247,250,0.52);
+  }
+
+  .type-card strong {
+    display: block;
+
+    margin-top: 48px;
+
+    font-size: 82px;
+    line-height: 0.9;
+    letter-spacing: -0.085em;
+    font-weight: 520;
+
+    color: rgba(245,247,250,0.86);
+  }
+
+  .swatches {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 64px;
+  }
+
+  .swatches i {
+    display: block;
+
+    width: 38px;
+    height: 58px;
+
+    border-radius: 10px;
+
+    border:
+      1px solid rgba(255,255,255,0.08);
+  }
+
+  .swatches i:nth-child(1) {
+    background: #05070A;
+  }
+
+  .swatches i:nth-child(2) {
+    background: #071016;
+  }
+
+  .swatches i:nth-child(3) {
+    background: #A7D8FF;
+
+    box-shadow:
+      0 0 34px rgba(167,216,255,0.10);
+  }
+
+  .surface {
+    position: absolute;
+    left: 26px;
+    right: 26px;
+    top: 86px;
+
+    height: 72px;
+
+    transform: skewY(-10deg);
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(245,247,250,0.10),
+        rgba(167,216,255,0.018)
+      ),
+      #070B11;
+
+    border:
+      1px solid rgba(255,255,255,0.07);
+
+    box-shadow:
+      0 28px 80px rgba(0,0,0,0.32),
+      0 0 34px rgba(167,216,255,0.045);
+  }
+
+  .ring {
+    position: relative;
+
+    width: 82px;
+    height: 82px;
+
+    margin: 56px auto 0;
+
+    border-radius: 999px;
+
+    border:
+      1px solid rgba(245,247,250,0.13);
+
+    box-shadow:
+      inset 0 0 28px rgba(167,216,255,0.025),
+      0 0 28px rgba(167,216,255,0.045);
+  }
+
+  .ring::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: -8px;
+
+    width: 1px;
+    height: 98px;
+
+    transform: translateX(-50%) rotate(38deg);
+
+    background:
+      linear-gradient(
+        180deg,
+        transparent,
+        rgba(167,216,255,0.28),
+        transparent
+      );
+
+    opacity: 0.34;
+  }
+
+  @media (max-width: 1200px) {
+    .design-language {
+      grid-template-columns: 1fr;
+    }
+
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+@media (max-width: 720px) {
+  .design-language {
+    padding:
+      78px
+      24px
+      86px;
+
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  h2 {
+    font-size: clamp(44px, 12vw, 62px);
+    line-height: 0.94;
+  }
+
+  .intro p {
+    font-size: 17px;
+    line-height: 1.68;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    min-height: 230px;
+    padding: 26px;
+  }
+
+  .type-card strong {
+    margin-top: 38px;
+    font-size: 72px;
+  }
+
+  .swatches {
+    margin-top: 48px;
+  }
+
+  .surface {
+    top: 76px;
+  }
+
+  .ring {
+    margin-top: 46px;
+  }
+}
+</style>

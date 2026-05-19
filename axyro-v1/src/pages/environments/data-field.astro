@@ -1,0 +1,91 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import EnvironmentHero from "../../components/EnvironmentHero.astro";
+import EnvironmentDownload from "../../components/EnvironmentDownload.astro";
+---
+
+<MainLayout title="Data Field — AXYRO">
+  <EnvironmentHero
+    type="POWER / PHASE 1"
+    title="Data Field"
+    subtitle="A quiet power environment for invisible systems, operational depth and focused control."
+    image="/images/env-depth.png"
+  />
+
+  <section class="philosophy">
+    <div class="left">
+      <p class="label">SYSTEM NOTE</p>
+
+      <h2>
+        Invisible systems<br />
+        beneath the surface.
+      </h2>
+    </div>
+
+    <div class="right">
+      <p>
+        Data Field explores a quieter form of power:
+        computational depth without visual aggression.
+      </p>
+
+      <p>
+        The environment focuses on hidden structure,
+        restrained operational lighting and silent system presence.
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="intro">
+      <p class="label">SYSTEM CHARACTERISTICS</p>
+
+      <h2>
+        Built for
+        operational depth.
+      </h2>
+    </div>
+
+    <div class="grid">
+      <div class="item">
+        <h3>Hidden structure</h3>
+
+        <p>
+          Quiet computational layers remain visible only through subtle depth and light.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Operational silence</h3>
+
+        <p>
+          The environment avoids visual noise while preserving system presence.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Restrained power</h3>
+
+        <p>
+          Darkness behaves as controlled material rather than dramatic mood.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Atmospheric compute</h3>
+
+        <p>
+          Light and structure create a calm operational field for focused workflows.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <EnvironmentDownload
+    title="Data Field"
+    subtitle="Designed for quiet infrastructure, operational compute environments and uninterrupted focus."
+  />
+</MainLayout>
+
+<style>
+  @import "../../styles/environment.css";
+</style>

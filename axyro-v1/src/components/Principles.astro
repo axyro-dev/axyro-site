@@ -1,0 +1,323 @@
+<section class="principles" id="philosophy">
+  <div class="top">
+    <div class="left">
+      <p class="eyebrow">OUR PRINCIPLES</p>
+
+      <p class="statement">
+        Open underneath,<br />
+        curated on top.
+      </p>
+    </div>
+
+    <div class="right">
+      <h2>
+        Freedom with standards.
+      </h2>
+
+      <p>
+        AXYRO combines open foundations with a restrained and carefully curated
+        experience designed for focused work.
+      </p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <span class="index">01</span>
+      <div class="orb"></div>
+
+      <h3>Focus</h3>
+
+      <p>
+        Remove noise. Keep only what supports the work.
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="index">02</span>
+      <div class="orb"></div>
+
+      <h3>Speed</h3>
+
+      <p>
+        Lightweight by default. Capable when required.
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="index">03</span>
+      <div class="orb"></div>
+
+      <h3>Control</h3>
+
+      <p>
+        Open underneath. Curated at the surface.
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="index">04</span>
+      <div class="orb"></div>
+
+      <h3>Precision</h3>
+
+      <p>
+        Every element has a reason to exist.
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .principles {
+    position: relative;
+
+    padding:
+      92px
+      clamp(32px, 7vw, 120px)
+      108px;
+
+    overflow: hidden;
+
+    background:
+      radial-gradient(
+        circle at 78% 18%,
+        rgba(167,216,255,0.035),
+        transparent 34%
+      ),
+      linear-gradient(
+        180deg,
+        #020407 0%,
+        #030712 100%
+      );
+
+    border-top:
+      1px solid rgba(255,255,255,0.05);
+  }
+
+  .principles::before {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(167,216,255,0.00),
+        rgba(167,216,255,0.07),
+        rgba(167,216,255,0.00)
+      );
+
+    opacity: 0.35;
+  }
+
+  .top {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns:
+      300px
+      1fr;
+
+    gap: clamp(56px, 8vw, 140px);
+
+    align-items: start;
+  }
+
+  .eyebrow {
+    margin: 0;
+
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+
+    color: rgba(167,216,255,0.78);
+  }
+
+  .statement {
+    margin: 34px 0 0;
+
+    max-width: 300px;
+
+    font-size: clamp(34px, 3.2vw, 48px);
+    line-height: 1.02;
+    letter-spacing: -0.07em;
+    font-weight: 520;
+
+    color: rgba(245,247,250,0.38);
+  }
+
+  h2 {
+    margin: 0;
+
+    max-width: 900px;
+
+    font-size: clamp(52px, 5.4vw, 86px);
+    line-height: 0.92;
+    letter-spacing: -0.085em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.96);
+  }
+
+  .right p {
+    margin: 30px 0 0;
+
+    max-width: 640px;
+
+    font-size: 19px;
+    line-height: 1.7;
+
+    color: rgba(245,247,250,0.55);
+  }
+
+  .grid {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 78px;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(4, 1fr);
+
+    border-top:
+      1px solid rgba(255,255,255,0.045);
+
+    border-left:
+      1px solid rgba(255,255,255,0.04);
+  }
+
+  .card {
+    position: relative;
+
+    min-height: 228px;
+
+    padding: 34px 32px 32px;
+
+    border-right:
+      1px solid rgba(255,255,255,0.045);
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.012),
+        rgba(255,255,255,0.002)
+      );
+  }
+
+  .card::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(167,216,255,0.08),
+        transparent
+      );
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .card:hover::after {
+    opacity: 1;
+  }
+
+  .index {
+    position: absolute;
+    right: 28px;
+    top: 28px;
+
+    font-size: 10px;
+    letter-spacing: 0.32em;
+
+    color: rgba(245,247,250,0.22);
+  }
+
+  .orb {
+    width: 22px;
+    height: 22px;
+
+    border-radius: 999px;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(167,216,255,0.14),
+        rgba(167,216,255,0.015) 68%
+      );
+
+    border:
+      1px solid rgba(167,216,255,0.07);
+
+    box-shadow:
+      0 0 32px rgba(167,216,255,0.045);
+  }
+
+  h3 {
+    margin: 46px 0 0;
+
+    font-size: 23px;
+    line-height: 1;
+    letter-spacing: -0.045em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.94);
+  }
+
+  .card p {
+    margin: 16px 0 0;
+
+    max-width: 250px;
+
+    font-size: 15px;
+    line-height: 1.65;
+
+    color: rgba(245,247,250,0.48);
+  }
+
+  @media (max-width: 1100px) {
+    .top {
+      grid-template-columns: 1fr;
+      gap: 54px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .principles {
+      padding:
+        76px
+        24px
+        88px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: clamp(48px, 13vw, 64px);
+    }
+  }
+</style>

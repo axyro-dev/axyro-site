@@ -1,0 +1,142 @@
+---
+import Navbar from "../components/Navbar.astro";
+
+const { title = "AXYRO" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+
+    <style is:global>
+      :root {
+        --bg: #020407;
+        --panel: #070B11;
+        --line: rgba(255,255,255,0.055);
+
+        --text: #F5F7FA;
+        --muted: rgba(245,247,250,0.56);
+
+        --cyan: #A7D8FF;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+
+        background: var(--bg);
+        color: var(--text);
+
+        font-family:
+          Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          "SF Pro Display",
+          sans-serif;
+
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      button,
+      a,
+      .card,
+      .axyro-card {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+
+        transition:
+          opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .reveal-delay-1 {
+        transition-delay: 0.08s;
+      }
+
+      .reveal-delay-2 {
+        transition-delay: 0.16s;
+      }
+
+      .reveal-delay-3 {
+        transition-delay: 0.24s;
+      }
+
+      .reveal-delay-4 {
+        transition-delay: 0.32s;
+      }
+
+      @media (hover: hover) {
+        .card:hover,
+        .axyro-card:hover {
+          transform: translateY(-4px);
+          will-change: transform;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <Navbar />
+
+    <slot />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.08,
+        }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import EnvironmentHero from "../../components/EnvironmentHero.astro";
+import EnvironmentDownload from "../../components/EnvironmentDownload.astro";
+---
+
+<MainLayout title="Blue Horizon — AXYRO">
+  <EnvironmentHero
+    type="NORMAL / PHASE 1"
+    title="Blue Horizon"
+    subtitle="A grounded environment for clarity, silence and sustained focus."
+    image="/images/env-horizon.png"
+  />
+  <section class="philosophy">
+  <div class="left">
+    <p class="label">ENVIRONMENT NOTE</p>
+
+    <h2>
+      Space creates<br />
+      clarity.
+    </h2>
+  </div>
+
+  <div class="right">
+    <p>
+      Blue Horizon is part of the first AXYRO environment layer:
+      grounded, atmospheric and close to Earth.
+    </p>
+
+    <p>
+      It uses distance, darkness and restrained horizon light to reduce noise
+      without making the system feel empty.
+    </p>
+  </div>
+</section>
+
+  <section class="features">
+    <div class="intro">
+     <p class="label">SYSTEM CHARACTERISTICS</p>
+
+      <h2>
+        Designed for
+        cognitive calm.
+      </h2>
+    </div>
+
+    <div class="grid">
+      <div class="item">
+        <h3>Atmospheric depth</h3>
+
+        <p>
+          Layered darkness and soft horizon light create a restrained sense
+          of space.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Minimal distraction</h3>
+
+        <p>
+          Every visual element is reduced to what matters most.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Focused workflow</h3>
+
+        <p>
+          Designed to support sustained concentration and clarity.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Quiet interaction</h3>
+
+        <p>
+          Motion and contrast remain subtle, intentional and controlled.
+        </p>
+      </div>
+    </div>
+  </section>
+  <EnvironmentDownload title="Blue Horizon" />
+</MainLayout>
+
+<style>
+  @import "../../styles/environment.css";
+</style>

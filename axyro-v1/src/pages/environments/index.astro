@@ -1,0 +1,443 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const environments = [
+  {
+    title: "Blue Horizon",
+    type: "NORMAL / PHASE 1",
+    image: "/images/env-horizon.png",
+    href: "/environments/blue-horizon",
+    text: "Clarity through space, silence and atmosphere.",
+  },
+  {
+    title: "Soft Grid",
+    type: "NORMAL / PHASE 1",
+    image: "/images/env-grid.png",
+    href: "/environments/soft-grid",
+    text: "Structured calm for focused workflows.",
+  },
+  {
+    title: "Black Core",
+    type: "POWER / PHASE 1",
+    image: "/images/env-core.png",
+    href: "/environments/black-core",
+    text: "Controlled darkness. Silent capability.",
+  },
+  {
+    title: "Data Field",
+    type: "POWER / PHASE 1",
+    image: "/images/env-depth.png",
+    href: "/environments/data-field",
+    text: "Invisible systems beneath the surface.",
+  },
+];
+---
+
+<MainLayout title="Environment Archive — AXYRO">
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">AXYRO ENVIRONMENT ARCHIVE</p>
+
+      <h1>
+        Operational environments<br />
+        for focused compute.
+      </h1>
+
+      <p class="sub">
+        A collection of calm digital environments designed for clarity,
+        restraint and sustained focus.
+      </p>
+
+      <span class="phase">
+        ENVIRONMENTS / PHASE 1
+      </span>
+    </section>
+
+    <section class="lineup">
+      {environments.map((item) => (
+        <a class="card" href={item.href}>
+          <img src={item.image} alt={`${item.title} environment preview`} />
+
+          <div class="shade"></div>
+
+          <div class="copy">
+            <span>{item.type}</span>
+            <h2>{item.title}</h2>
+            <p>{item.text}</p>
+          </div>
+        </a>
+      ))}
+    </section>
+
+    <section class="split">
+      <div>
+        <p class="eyebrow">NORMAL</p>
+
+        <h2>
+          Calm by<br />
+          default.
+        </h2>
+
+        <p>
+          Normal environments prioritize atmosphere, spacing and cognitive quiet.
+        </p>
+      </div>
+
+      <div>
+        <p class="eyebrow">POWER</p>
+
+        <h2>
+          Controlled when<br />
+          needed.
+        </h2>
+
+        <p>
+          Power environments reduce visual noise while preserving operational weight.
+        </p>
+      </div>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .page {
+    min-height: 100vh;
+
+    background:
+      radial-gradient(
+        circle at 72% 12%,
+        rgba(167,216,255,0.035),
+        transparent 32%
+      ),
+      linear-gradient(
+        180deg,
+        #020407 0%,
+        #030712 100%
+      );
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+
+    padding:
+      230px
+      clamp(32px, 7vw, 120px)
+      112px;
+  }
+
+  .hero::before {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: 76px;
+
+    width: 62vw;
+    max-width: 980px;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(167,216,255,0.18),
+        transparent
+      );
+
+    opacity: 0.26;
+
+    pointer-events: none;
+  }
+
+  .eyebrow {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 28px;
+
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+
+    color: rgba(167,216,255,0.76);
+  }
+
+  h1 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    max-width: 1180px;
+
+    font-size: clamp(62px, 7vw, 112px);
+    line-height: 0.9;
+    letter-spacing: -0.085em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.97);
+  }
+
+  .sub {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 36px;
+
+    max-width: 580px;
+
+    font-size: 19px;
+    line-height: 1.72;
+
+    color: rgba(245,247,250,0.56);
+  }
+
+  .phase {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+
+    margin-top: 58px;
+
+    font-size: 10px;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+
+    color: rgba(245,247,250,0.28);
+  }
+
+  .lineup {
+    padding:
+      0
+      clamp(32px, 7vw, 120px)
+      132px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 24px;
+  }
+
+  .card {
+    position: relative;
+
+    display: block;
+
+    aspect-ratio: 0.82;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.018),
+        rgba(255,255,255,0.006)
+      ),
+      #05070A;
+
+    border:
+      1px solid rgba(255,255,255,0.035);
+
+    transition:
+      transform 0.7s cubic-bezier(.19, 1, .22, 1),
+      border-color 0.7s ease,
+      box-shadow 0.7s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+      rgba(167,216,255,0.10);
+
+    box-shadow:
+      0 20px 60px rgba(0,0,0,0.22),
+      0 0 32px rgba(167,216,255,0.022);
+  }
+
+  .card img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 50% 32%;
+
+    filter:
+      brightness(0.94)
+      contrast(1.08)
+      saturate(0.88);
+
+    transition:
+      transform 1.4s cubic-bezier(.19, 1, .22, 1),
+      filter 1.4s ease;
+  }
+
+  .card:hover img {
+    transform: scale(1.025);
+
+    filter:
+      brightness(1)
+      contrast(1.12)
+      saturate(0.92);
+  }
+
+  .shade {
+    position: absolute;
+    inset: 0;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(2,4,7,0.08) 0%,
+        rgba(2,4,7,0.24) 42%,
+        rgba(2,4,7,0.74) 100%
+      );
+  }
+
+  .copy {
+    position: absolute;
+
+    left: 28px;
+    right: 28px;
+    bottom: 36px;
+
+    z-index: 2;
+  }
+
+  .copy span {
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+
+    color: rgba(167,216,255,0.72);
+  }
+
+  .copy h2 {
+    margin: 16px 0 12px;
+
+    font-size: clamp(24px, 2vw, 30px);
+    line-height: 1;
+    letter-spacing: -0.055em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.96);
+  }
+
+  .copy p {
+    margin: 0;
+
+    max-width: 260px;
+
+    font-size: 15.5px;
+    line-height: 1.65;
+
+    color: rgba(245,247,250,0.54);
+  }
+
+  .split {
+    padding:
+      122px
+      clamp(32px, 7vw, 120px)
+      154px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+
+    background:
+      linear-gradient(
+        180deg,
+        #020407,
+        #030712
+      );
+
+    border-top:
+      1px solid rgba(255,255,255,0.035);
+  }
+
+  .split > div {
+    padding: 42px;
+
+    border-radius: 26px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.018),
+        rgba(255,255,255,0.006)
+      );
+
+    border:
+      1px solid rgba(255,255,255,0.035);
+  }
+
+  .split h2 {
+    margin: 0;
+
+    font-size: clamp(42px, 4vw, 68px);
+    line-height: 0.94;
+    letter-spacing: -0.075em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.96);
+  }
+
+  .split p:not(.eyebrow) {
+    margin: 28px 0 0;
+
+    max-width: 520px;
+
+    font-size: 18px;
+    line-height: 1.75;
+
+    color: rgba(245,247,250,0.55);
+  }
+
+  @media (max-width: 1200px) {
+    .lineup {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 760px) {
+    .hero {
+      padding:
+        170px
+        24px
+        88px;
+    }
+
+    .lineup,
+    .split {
+      grid-template-columns: 1fr;
+    }
+
+    .lineup {
+      padding:
+        0
+        24px
+        100px;
+    }
+
+    .split {
+      padding:
+        92px
+        24px
+        112px;
+    }
+
+    h1 {
+      font-size: clamp(54px, 14vw, 72px);
+    }
+  }
+</style>

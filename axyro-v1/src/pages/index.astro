@@ -1,0 +1,31 @@
+---
+import Footer from "../components/Footer.astro";
+import DesignLanguage from "../components/DesignLanguage.astro";
+import Environments from "../components/Environments.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Principles from "../components/Principles.astro";
+import Journal from "../components/Journal.astro";
+---
+
+<BaseLayout title="AXYRO">
+  <Hero />
+
+  <div class="reveal">
+    <Principles />
+  </div>
+
+  <div class="reveal">
+    <Environments />
+  </div>
+
+  <div class="reveal">
+    <DesignLanguage />
+  </div>
+
+  <div class="reveal">
+    <Journal />
+  </div>
+
+  <Footer />
+</BaseLayout>

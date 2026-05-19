@@ -1,0 +1,290 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<MainLayout title="Support AXYRO">
+  <main class="support-page">
+    <section class="hero">
+      <p class="eyebrow">SUPPORT SYSTEM</p>
+
+      <h1>
+        Support<br />
+        AXYRO.
+      </h1>
+
+      <p class="sub">
+        Support the development of calm compute environments, visual systems
+        and focused digital spaces.
+      </p>
+
+      <span class="phase">
+        SUPPORT SYSTEM / PHASE 1
+      </span>
+    </section>
+
+    <section class="support-grid">
+      <article class="method">
+        <span class="label">BTC</span>
+        <h2>Bitcoin</h2>
+        <p>Preferred for long-term infrastructure support.</p>
+
+        <div class="wallet">
+          bc1qxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </div>
+      </article>
+
+      <article class="method">
+        <span class="label">PAYPAL</span>
+        <h2>PayPal</h2>
+        <p>For direct project support and ongoing development.</p>
+
+        <a href="/">Open PayPal →</a>
+      </article>
+
+      <article class="method disabled">
+        <span class="label">FUTURE RELEASES</span>
+        <h2>Environment Packs</h2>
+        <p>Curated 4K environments and system releases will arrive later.</p>
+
+        <span class="coming">PHASE 1</span>
+      </article>
+    </section>
+  </main>
+
+  <Footer />
+</MainLayout>
+
+<style>
+  .support-page {
+    min-height: auto;
+
+    background:
+      radial-gradient(
+        circle at 72% 12%,
+        rgba(167,216,255,0.03),
+        transparent 34%
+      ),
+      linear-gradient(
+        180deg,
+        #020407 0%,
+        #030712 100%
+      );
+  }
+
+  .hero {
+    padding:
+      190px
+      clamp(32px, 7vw, 120px)
+      96px;
+  }
+
+  .eyebrow {
+    margin: 0 0 28px;
+
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+
+    color: rgba(167,216,255,0.76);
+  }
+
+  h1 {
+    margin: 0;
+
+    font-size: clamp(72px, 8vw, 124px);
+    line-height: 0.88;
+    letter-spacing: -0.09em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.98);
+  }
+
+  .sub {
+    margin-top: 34px;
+
+    max-width: 620px;
+
+    font-size: 19px;
+    line-height: 1.72;
+
+    color: rgba(245,247,250,0.56);
+  }
+
+  .phase {
+    display: inline-flex;
+
+    margin-top: 54px;
+
+    font-size: 10px;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+
+    color: rgba(245,247,250,0.28);
+  }
+
+  .support-grid {
+    padding:
+      0
+      clamp(32px, 7vw, 120px)
+      72px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+  }
+
+  .method {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 34px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.018),
+        rgba(255,255,255,0.006)
+      );
+
+    border:
+      1px solid rgba(255,255,255,0.035);
+
+    transition:
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.6s ease,
+      background 0.6s ease;
+  }
+
+  .method::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(167,216,255,0.16),
+        transparent
+      );
+
+    opacity: 0.22;
+  }
+
+  .method:hover {
+    transform: translateY(-4px);
+
+    border-color:
+      rgba(167,216,255,0.08);
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.026),
+        rgba(255,255,255,0.01)
+      );
+  }
+
+  .label {
+    font-size: 10px;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+
+    color: rgba(167,216,255,0.72);
+  }
+
+  h2 {
+    margin: 24px 0 0;
+
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    font-weight: 540;
+
+    color: rgba(245,247,250,0.94);
+  }
+
+  .method p {
+    margin-top: 22px;
+
+    max-width: 330px;
+
+    font-size: 15.5px;
+    line-height: 1.7;
+
+    color: rgba(245,247,250,0.52);
+  }
+
+  .wallet {
+    margin-top: 46px;
+
+    padding: 18px 20px;
+
+    border-radius: 16px;
+
+    background:
+      rgba(255,255,255,0.022);
+
+    border:
+      1px solid rgba(255,255,255,0.04);
+
+    font-size: 13px;
+    line-height: 1.6;
+    word-break: break-all;
+
+    color: rgba(245,247,250,0.7);
+  }
+
+  .method a,
+  .coming {
+    position: absolute;
+    left: 34px;
+    bottom: 34px;
+
+    font-size: 14px;
+
+    color: rgba(167,216,255,0.82);
+  }
+
+  .disabled {
+    opacity: 0.82;
+  }
+
+  @media (max-width: 1100px) {
+    .support-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .hero {
+      padding:
+        170px
+        24px
+        82px;
+    }
+
+    .support-grid {
+      padding:
+        0
+        24px
+        72px;
+    }
+
+    h1 {
+      font-size: clamp(58px, 14vw, 84px);
+    }
+  }
+</style>

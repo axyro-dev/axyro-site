@@ -1,0 +1,245 @@
+<section class="journal" id="journal">
+  <div class="journal-inner">
+    <div class="intro reveal">
+      <p class="eyebrow">JOURNAL</p>
+
+      <h2>
+        Notes from the<br />
+        environment layer.
+      </h2>
+
+      <p>
+        Short studies on calm compute, atmosphere, interface restraint and the
+        systems language behind AXYRO.
+      </p>
+    </div>
+
+    <div class="entries">
+      <a class="entry reveal reveal-delay-1" href="/journal/reduce-noise">
+        <span>01</span>
+        <h3>Reduce noise.</h3>
+        <p>Why the first layer of AXYRO begins with silence, not features.</p>
+      </a>
+
+      <a class="entry reveal reveal-delay-2" href="/journal/environment-layer">
+        <span>02</span>
+        <h3>The environment layer.</h3>
+        <p>Building atmosphere before claiming a system.</p>
+      </a>
+
+      <a class="entry reveal reveal-delay-3" href="/journal/controlled-darkness">
+        <span>03</span>
+        <h3>Controlled darkness.</h3>
+        <p>Darkness as material, not mood.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .journal {
+    position: relative;
+
+    padding:
+      104px
+      clamp(32px, 7vw, 120px)
+      118px;
+
+    overflow: hidden;
+
+    background:
+      radial-gradient(
+        circle at 18% 22%,
+        rgba(167,216,255,0.03),
+        transparent 32%
+      ),
+      linear-gradient(
+        180deg,
+        #030712 0%,
+        #020407 100%
+      );
+
+    border-top:
+      1px solid rgba(255,255,255,0.045);
+  }
+
+  .journal::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 36%;
+
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(167,216,255,0.07),
+        transparent
+      );
+
+    opacity: 0.32;
+  }
+
+  .journal-inner {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 440px 1fr;
+    gap: clamp(64px, 8vw, 132px);
+
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    margin: 0 0 26px;
+
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+
+    color: rgba(167,216,255,0.78);
+  }
+
+  h2 {
+    margin: 0;
+
+    font-size: clamp(48px, 4.8vw, 80px);
+    line-height: 0.92;
+    letter-spacing: -0.085em;
+    font-weight: 560;
+
+    color: rgba(245,247,250,0.96);
+  }
+
+  .intro p {
+    margin: 32px 0 0;
+
+    max-width: 420px;
+
+    font-size: 18px;
+    line-height: 1.72;
+
+    color: rgba(245,247,250,0.55);
+  }
+
+  .entries {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    border-top:
+      1px solid rgba(255,255,255,0.055);
+  }
+
+  .entry {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 72px 1fr 360px;
+    gap: 32px;
+
+    padding: 34px 0;
+
+    border-bottom:
+      1px solid rgba(255,255,255,0.055);
+
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .entry::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(167,216,255,0.22),
+        transparent
+      );
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+  }
+
+  .entry:hover::after {
+    opacity: 1;
+  }
+
+  .entry span {
+    font-size: 10px;
+    letter-spacing: 0.32em;
+
+    color: rgba(245,247,250,0.26);
+  }
+
+  .entry h3 {
+    margin: 0;
+
+    font-size: clamp(26px, 2.3vw, 38px);
+    line-height: 1;
+    letter-spacing: -0.06em;
+    font-weight: 540;
+
+    color: rgba(245,247,250,0.92);
+  }
+
+  .entry p {
+    margin: 0;
+
+    max-width: 330px;
+
+    font-size: 15.5px;
+    line-height: 1.65;
+
+    color: rgba(245,247,250,0.48);
+  }
+
+  @media (max-width: 1200px) {
+    .journal-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .entry {
+      grid-template-columns: 56px 1fr;
+    }
+
+    .entry p {
+      grid-column: 2;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .journal {
+      padding:
+        82px
+        24px
+        92px;
+    }
+
+    .entry {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .entry p {
+      grid-column: auto;
+    }
+
+    h2 {
+      font-size: clamp(46px, 12vw, 62px);
+    }
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import EnvironmentHero from "../../components/EnvironmentHero.astro";
+import EnvironmentDownload from "../../components/EnvironmentDownload.astro";
+---
+
+<MainLayout title="Black Core — AXYRO">
+  <EnvironmentHero
+    type="POWER / PHASE 1"
+    title="Black Core"
+    subtitle="A controlled power environment for silent capability, deep focus and restrained system presence."
+    image="/images/env-core.png"
+  />
+
+  <section class="philosophy">
+    <div class="left">
+      <p class="label">SYSTEM NOTE</p>
+
+      <h2>
+        Darkness becomes<br />
+        material.
+      </h2>
+    </div>
+
+    <div class="right">
+      <p>
+        Black Core treats darkness as structure, not decoration.
+        It removes unnecessary visual energy without becoming empty.
+      </p>
+
+      <p>
+        The environment is built around silence, contrast and controlled system pressure.
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="intro">
+      <p class="label">SYSTEM CHARACTERISTICS</p>
+
+      <h2>
+        Built for
+        silent capability.
+      </h2>
+    </div>
+
+    <div class="grid">
+      <div class="item">
+        <h3>Controlled darkness</h3>
+
+        <p>
+          Black levels create focus while preserving depth, hierarchy and spatial clarity.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Operational weight</h3>
+
+        <p>
+          The environment feels capable without aggressive lighting or visual noise.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Deep focus</h3>
+
+        <p>
+          Reduced stimulation supports longer sessions where control matters.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Restrained power</h3>
+
+        <p>
+          Contrast, spacing and light are tuned for quiet authority.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <EnvironmentDownload
+    title="Black Core"
+    subtitle="Designed for controlled workspaces, quiet power states and focused operational environments."
+  />
+</MainLayout>
+
+<style>
+  @import "../../styles/environment.css";
+</style>
