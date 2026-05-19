@@ -15,7 +15,7 @@
     </p>
 
     <div class="actions">
-      <a class="primary" href="/support">Support the environments →</a>
+     <a class="primary" href="/environments">Explore environments →</a>
       <a class="secondary" href="/journal">Read the journal</a>
     </div>
   </div>
@@ -56,35 +56,36 @@
         rgba(2,4,7,0.00) 44%,
         rgba(2,4,7,0.84) 100%
       ),
-      url("/images/hero-environment.png");
+      url("/wallpapers/axyro_blue_horizon_v2_4kd.png");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     filter:
-      brightness(0.88)
-      contrast(1.12)
-      saturate(0.86);
+      brightness(0.82)
+      contrast(1.06)
+      saturate(0.82);
 
     transform: scale(1.012);
+
     animation:
-  heroDrift 28s ease-in-out infinite alternate;
+      heroDrift 28s ease-in-out infinite alternate;
   }
 
   @keyframes heroDrift {
-  0% {
-    transform:
-      scale(1.01)
-      translate3d(0px, 0px, 0px);
-  }
+    0% {
+      transform:
+        scale(1.01)
+        translate3d(0px, 0px, 0px);
+    }
 
-  100% {
-    transform:
-      scale(1.045)
-      translate3d(-12px, -6px, 0px);
+    100% {
+      transform:
+        scale(1.045)
+        translate3d(-12px, -6px, 0px);
+    }
   }
-}
 
   .haze {
     position: absolute;
@@ -109,7 +110,7 @@
         rgba(2,4,7,0.82) 100%
       );
 
-    opacity: 0.72;
+    opacity: 0.58;
 
     pointer-events: none;
   }
@@ -164,8 +165,10 @@
 
     width: min(980px, 90vw);
     max-width: 760px;
+
     margin-left: clamp(32px, 7vw, 132px);
     margin-top: 18px;
+
     will-change: transform;
   }
 
@@ -181,7 +184,8 @@
 
   h1 {
     margin: 0;
-   max-width: 720px;
+
+    max-width: 720px;
 
     font-size: clamp(64px, 7vw, 118px);
     line-height: 0.88;
@@ -233,6 +237,7 @@
 
   .primary {
     background: rgba(245,247,250,0.94);
+
     border: 1px solid rgba(255,255,255,0.08);
 
     color: #05070A;
@@ -263,45 +268,46 @@
     background: rgba(255,255,255,0.035);
   }
 
-@media (max-width: 720px) {
-  .hero {
-    min-height: 640px;
+  @media (max-width: 720px) {
+    .hero {
+      min-height: 640px;
 
-    padding-top: 132px;
+      padding-top: 132px;
+    }
+
+    .hero-content {
+      width: calc(100vw - 48px);
+
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+
+    h1 {
+      font-size: clamp(52px, 14vw, 74px);
+
+      line-height: 0.92;
+    }
+
+    .sub {
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      max-width: 100%;
+    }
+
+    .actions {
+      flex-direction: column;
+
+      align-items: flex-start;
+    }
+
+    .actions a {
+      width: 100%;
+    }
   }
-
-  .hero-content {
-    width: calc(100vw - 48px);
-
-    margin-left: 24px;
-    margin-right: 24px;
-  }
-
-  h1 {
-    font-size: clamp(52px, 14vw, 74px);
-
-    line-height: 0.92;
-  }
-
-  .sub {
-    font-size: 17px;
-
-    line-height: 1.7;
-
-    max-width: 100%;
-  }
-
-  .actions {
-    flex-direction: column;
-
-    align-items: flex-start;
-  }
-
-  .actions a {
-    width: 100%;
-  }
-}
 </style>
+
 <script is:inline>
   const hero = document.querySelector(".hero-content");
 

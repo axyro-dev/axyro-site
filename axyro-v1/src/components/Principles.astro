@@ -108,9 +108,9 @@
     background:
       linear-gradient(
         180deg,
-        rgba(167,216,255,0.00),
+        rgba(167,216,255,0),
         rgba(167,216,255,0.07),
-        rgba(167,216,255,0.00)
+        rgba(167,216,255,0)
       );
 
     opacity: 0.35;
@@ -151,13 +151,13 @@
     letter-spacing: -0.07em;
     font-weight: 520;
 
-    color: rgba(245,247,250,0.38);
+    color: rgba(245,247,250,0.34);
   }
 
   h2 {
     margin: 0;
 
-    max-width: 900px;
+    max-width: 820px;
 
     font-size: clamp(52px, 5.4vw, 86px);
     line-height: 0.92;
@@ -185,15 +185,8 @@
     margin-top: 78px;
 
     display: grid;
-
-    grid-template-columns:
-      repeat(4, 1fr);
-
-    border-top:
-      1px solid rgba(255,255,255,0.045);
-
-    border-left:
-      1px solid rgba(255,255,255,0.04);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 34px;
   }
 
   .card {
@@ -203,14 +196,14 @@
 
     padding: 34px 32px 32px;
 
-    border-right:
-      1px solid rgba(255,255,255,0.045);
+    border:
+      1px solid rgba(255,255,255,0.028);
 
     background:
       linear-gradient(
         180deg,
-        rgba(255,255,255,0.012),
-        rgba(255,255,255,0.002)
+        rgba(255,255,255,0.008),
+        rgba(255,255,255,0.001)
       );
   }
 
@@ -233,6 +226,7 @@
       );
 
     opacity: 0;
+
     transition: opacity 0.4s ease;
   }
 

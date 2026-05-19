@@ -24,7 +24,7 @@
     >
       <div class="axyro-image">
         <img
-          src="/images/env-horizon.png"
+          src="/wallpapers/axyro_blue_horizon_v2_4kd.png"
           alt="Blue Horizon"
         />
       </div>
@@ -46,7 +46,7 @@
     >
       <div class="axyro-image">
         <img
-          src="/images/env-grid.png"
+          src="/wallpapers/axyro_soft_grid_v1_4kd.png"
           alt="Soft Grid"
         />
       </div>
@@ -68,7 +68,7 @@
     >
       <div class="axyro-image">
         <img
-          src="/images/env-core.png"
+          src="/wallpapers/axyro_power_black_core_v1_4kd.png"
           alt="Black Core"
         />
       </div>
@@ -90,7 +90,7 @@
     >
       <div class="axyro-image">
         <img
-          src="/images/env-depth.png"
+          src="/wallpapers/axyro_power_data_field_v2_4kd.png"
           alt="Data Field"
         />
       </div>
@@ -176,12 +176,12 @@
   }
 
   h2 {
-     max-width: 760px;
+    max-width: 760px;
 
-  font-size: clamp(50px, 5vw, 82px);
+    font-size: clamp(50px, 5vw, 82px);
 
-  line-height: 0.9;
-  letter-spacing: -0.085em;
+    line-height: 0.9;
+    letter-spacing: -0.085em;
   }
 
   .right p {
@@ -230,7 +230,7 @@
       );
 
     border:
-      1px solid rgba(255,255,255,0.035);
+     1px solid rgba(255,255,255,0.024);
 
     transition:
       transform 0.8s cubic-bezier(.19, 1, .22, 1),
@@ -258,25 +258,21 @@
     margin-top: 92px;
   }
 
-  .card::before {
-    content: "";
+ .cards::before {
+  content: "";
 
-    position: absolute;
-    inset: 0;
+  position: absolute;
+  inset: -10%;
 
-    z-index: 2;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(142,223,255,0.03),
+      transparent 60%
+    );
 
-    background:
-      linear-gradient(
-        180deg,
-        rgba(2,4,7,0.08) 0%,
-        rgba(2,4,7,0.22) 42%,
-        rgba(2,4,7,0.82) 100%
-      );
-
-    pointer-events: none;
-  }
-
+  pointer-events: none;
+}
   .card::after {
     content: "";
 
@@ -303,17 +299,17 @@
     pointer-events: none;
   }
 
-  .card:hover {
-    transform:
-      translateY(-8px);
+ .card:hover {
+  transform:
+    translateY(-6px);
 
-    border-color:
-      rgba(167,216,255,0.10);
+  border-color:
+    rgba(167,216,255,0.065);
 
-    box-shadow:
-      0 24px 80px rgba(0,0,0,0.26),
-      0 0 42px rgba(167,216,255,0.026);
-  }
+  box-shadow:
+    0 18px 54px rgba(0,0,0,0.22),
+    0 0 24px rgba(167,216,255,0.016);
+}
 
   .axyro-image {
     position: absolute;
@@ -333,22 +329,23 @@
     object-position: center;
 
     filter:
-      brightness(0.92)
-      contrast(1.08)
-      saturate(0.86);
+      brightness(0.82)
+      contrast(1.06)
+      saturate(0.82);
 
-    transform: scale(1.02);
+    transform: scale(1.04);
 
     transition:
       transform 1.8s cubic-bezier(.19, 1, .22, 1),
       filter 1.8s ease;
   }
 
-  .card:nth-child(3) img {
+  .card:nth-child(3) img,
+  .card:nth-child(4) img {
     filter:
-      brightness(0.82)
-      contrast(1.14)
-      saturate(0.72);
+      brightness(0.78)
+      contrast(1.08)
+      saturate(0.70);
   }
 
   .card:hover img {
@@ -356,9 +353,9 @@
       scale(1.05);
 
     filter:
-      brightness(1)
-      contrast(1.12)
-      saturate(0.92);
+      brightness(0.9)
+      contrast(1.08)
+      saturate(0.88);
   }
 
   .content {
