@@ -6,12 +6,29 @@ const { title = "AXYRO" } = Astro.props;
 
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 
     <title>{title}</title>
 
-    <link rel="icon" type="image/png" href="/favicon.png" />
+   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#05070A" />
+
+  <meta property="og:title" content="AXYRO" />
+  <meta property="og:description" content="A quieter way to interact with machines." />
+  <meta property="og:image" content="https://axyro.io/og-image.png" />
+  <meta property="og:url" content="https://axyro.io" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AXYRO" />
+  <meta name="twitter:description" content="A quieter way to interact with machines." />
+  <meta name="twitter:image" content="https://axyro.io/og-image.png" />
 
     <style is:global>
       :root {

@@ -1,11 +1,13 @@
 <header class="nav">
-  <a class="brand" href="/">
-    <img class="mark-logo" src="/favicon.png" alt="AXYRO icon" />
+ <div class="brand-lockup">
+  <span class="brand-symbol">AX</span>
 
-    <span class="wordmark">
-      A X Y R O
-    </span>
-  </a>
+  <span class="brand-divider"></span>
+
+  <span class="brand-wordmark">
+    A X Y R O
+  </span>
+</div>
 
   <nav class="links">
     <a href="/">Overview</a>
@@ -257,16 +259,55 @@
       letter-spacing: 0.28em;
     }
   }
-</style>
+  .brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
 
+.brand-symbol {
+  font-size: 15px;
+  font-weight: 520;
+  letter-spacing: -0.04em;
+
+  color: rgba(245,247,250,0.94);
+}
+
+.brand-divider {
+  width: 1px;
+  height: 14px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(255,255,255,0.18),
+      transparent
+    );
+
+  opacity: 0.5;
+}
+
+.brand-wordmark {
+  font-size: 11px;
+
+  letter-spacing: 0.52em;
+
+  text-transform: uppercase;
+
+  color: rgba(245,247,250,0.82);
+}
+</style>
 <script>
   const nav = document.querySelector(".nav");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 24) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
+  if (nav) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 24) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+  }
 </script>
