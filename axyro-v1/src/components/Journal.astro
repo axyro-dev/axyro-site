@@ -1,4 +1,4 @@
-<section class="journal" id="journal">
+<section class="journal reveal" id="journal">
   <div class="journal-inner">
     <div class="intro reveal">
       <p class="eyebrow">JOURNAL</p>
@@ -32,6 +32,12 @@
         <h3>Controlled darkness.</h3>
         <p>Darkness as material, not mood.</p>
       </a>
+
+      <a class="entry reveal reveal-delay-4" href="/journal/quiet-systems-feel-faster">
+        <span>04</span>
+        <h3>Quiet systems feel faster.</h3>
+        <p>Calm interaction creates stronger control.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -41,9 +47,9 @@
     position: relative;
 
     padding:
-      104px
-      clamp(32px, 7vw, 120px)
-      118px;
+      112px
+      clamp(42px, 7vw, 132px)
+      124px;
 
     overflow: hidden;
 
@@ -60,7 +66,7 @@
       );
 
     border-top:
-      1px solid rgba(255,255,255,0.045);
+      1px solid rgba(255,255,255,0.035);
   }
 
   .journal::before {
@@ -111,8 +117,8 @@
 
     font-size: clamp(48px, 4.8vw, 80px);
     line-height: 0.92;
-    letter-spacing: -0.085em;
-    font-weight: 560;
+    letter-spacing: -0.07em;
+    font-weight: 440;
 
     color: rgba(245,247,250,0.96);
   }
@@ -125,7 +131,7 @@
     font-size: 18px;
     line-height: 1.72;
 
-    color: rgba(245,247,250,0.55);
+    color: rgba(245,247,250,0.48);
   }
 
   .entries {
@@ -143,10 +149,10 @@
     grid-template-columns: 72px 1fr 360px;
     gap: 32px;
 
-    padding: 34px 0;
+    padding: 52px 0;
 
     border-bottom:
-      1px solid rgba(255,255,255,0.055);
+      1px solid rgba(255,255,255,0.038);
 
     text-decoration: none;
     color: inherit;
@@ -175,7 +181,7 @@
   }
 
   .entry:hover::after {
-    opacity: 1;
+    opacity: 0.55;
   }
 
   .entry span {
@@ -190,8 +196,8 @@
 
     font-size: clamp(26px, 2.3vw, 38px);
     line-height: 1;
-    letter-spacing: -0.06em;
-    font-weight: 540;
+    letter-spacing: -0.045em;
+    font-weight: 420;
 
     color: rgba(245,247,250,0.92);
   }

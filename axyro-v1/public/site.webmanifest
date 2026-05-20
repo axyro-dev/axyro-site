@@ -1,9 +1,6 @@
 {
   "name": "AXYRO",
   "short_name": "AXYRO",
-  "theme_color": "#05070A",
-  "background_color": "#05070A",
-  "display": "standalone",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -15,5 +12,8 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "theme_color": "#05070A",
+  "background_color": "#05070A",
+  "display": "standalone"
 }

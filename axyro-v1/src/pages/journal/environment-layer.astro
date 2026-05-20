@@ -1,0 +1,206 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="The environment layer — AXYRO">
+  <main class="article-page">
+    <section class="article-hero">
+      <p class="eyebrow">JOURNAL / EARTH PHASE</p>
+
+      <span class="index">02</span>
+
+      <h1>The environment layer.</h1>
+
+      <p class="sub">
+        Building atmosphere before claiming a platform.
+      </p>
+    </section>
+
+    <article class="article-body">
+      <p>
+        Most systems begin with functionality.
+        AXYRO begins with atmosphere.
+      </p>
+
+      <p>
+        Before interaction becomes meaningful,
+        the environment already shapes cognition.
+        Space, darkness, silence and visual restraint define
+        the emotional condition of compute.
+      </p>
+
+      <p>
+        The environment layer is not decoration.
+        It is the first interface between the machine and attention.
+      </p>
+
+      <p>
+        Calm systems reduce resistance before the first click,
+        the first gesture or the first command.
+      </p>
+
+      <p>
+        AXYRO treats wallpapers, spacing, typography,
+        depth and diffusion as infrastructural elements
+        rather than visual accessories.
+      </p>
+
+      <p>
+        The goal is not futuristic spectacle.
+        The goal is sustained cognitive clarity.
+      </p>
+    </article>
+
+    <section class="article-footer">
+      <a href="/journal">← Back to journal</a>
+
+      <span>
+        AXYRO JOURNAL / 02
+      </span>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .article-page {
+    min-height: 100vh;
+
+    background:
+      radial-gradient(
+        circle at 72% 18%,
+        rgba(167,216,255,0.025),
+        transparent 36%
+      ),
+      linear-gradient(
+        180deg,
+        #020407 0%,
+        #030712 100%
+      );
+  }
+
+  .article-hero {
+    padding:
+      260px
+      clamp(32px, 8vw, 160px)
+      120px;
+  }
+
+  .eyebrow {
+    margin: 0 0 42px;
+
+    font-size: 11px;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+
+    color: rgba(167,216,255,0.68);
+  }
+
+  .index {
+    display: block;
+
+    margin-bottom: 34px;
+
+    font-size: 11px;
+    letter-spacing: 0.38em;
+
+    color: rgba(245,247,250,0.22);
+  }
+
+  h1 {
+    margin: 0;
+
+    font-size: clamp(72px, 8vw, 132px);
+    line-height: 0.9;
+    letter-spacing: -0.08em;
+    font-weight: 430;
+
+    color: rgba(245,247,250,0.96);
+  }
+
+  .sub {
+    margin-top: 34px;
+
+    max-width: 620px;
+
+    font-size: 20px;
+    line-height: 1.7;
+
+    color: rgba(245,247,250,0.52);
+  }
+
+  .article-body {
+    max-width: 680px;
+
+    margin-left: clamp(32px, 8vw, 160px);
+
+    padding:
+      40px
+      0
+      120px;
+  }
+
+  .article-body p {
+    margin: 0 0 38px;
+
+    font-size: clamp(24px, 2.2vw, 34px);
+    line-height: 1.42;
+    letter-spacing: -0.035em;
+    font-weight: 360;
+
+    color: rgba(245,247,250,0.82);
+  }
+
+  .article-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+
+    padding:
+      64px
+      clamp(32px, 8vw, 160px)
+      96px;
+
+    border-top:
+      1px solid rgba(255,255,255,0.04);
+  }
+
+  .article-footer a,
+  .article-footer span {
+    font-size: 10px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+
+    color: rgba(245,247,250,0.32);
+
+    text-decoration: none;
+  }
+
+  .article-footer a:hover {
+    color: rgba(167,216,255,0.72);
+  }
+
+  @media (max-width: 720px) {
+    .article-hero {
+      padding:
+        170px
+        24px
+        76px;
+    }
+
+    .article-body {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+
+    .article-footer {
+      flex-direction: column;
+
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    h1 {
+      font-size: clamp(60px, 16vw, 88px);
+    }
+  }
+</style>

@@ -1,33 +1,34 @@
 <section class="hero reveal">
   <div class="hero-bg"></div>
   <div class="haze"></div>
+  <div class="vignette"></div>
 
-  <div class="hero-content">
-    <p class="eyebrow">Focused. Precise. Calm.</p>
+ <div class="hero-content reveal">
+  <p class="eyebrow">Focused. Precise. Calm.</p>
 
-    <h1>
-      Calm compute<br />
-      environments.
-    </h1>
+  <h1>
+    A quieter visual system<br />
+    for calmer digital environments.
+  </h1>
 
-    <p class="sub">
-      Operational environments designed for clarity, calm and focused work.
-    </p>
+  <p class="sub">
+    Atmospheric digital environments focused on clarity, restraint and calm compute.
+  </p>
 
-    <div class="actions">
-     <a class="primary" href="/environments">Explore environments →</a>
-      <a class="secondary" href="/journal">Read the journal</a>
-    </div>
+  <div class="actions">
+    <a class="primary" href="/environments">Explore environments →</a>
+    <a class="secondary" href="/journal">Read the journal</a>
   </div>
+</div>
 </section>
 
 <style>
   .hero {
     position: relative;
+    overflow: hidden;
+   min-height: 82vh;  
 
-    min-height: 760px;
-
-    padding-top: 148px;
+   padding-top: 132px;
 
     display: flex;
     align-items: flex-start;
@@ -37,55 +38,58 @@
     background: #020407;
   }
 
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+ .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 
-    background:
-      linear-gradient(
-        90deg,
-        rgba(2,4,7,0.92) 0%,
-        rgba(2,4,7,0.70) 32%,
-        rgba(2,4,7,0.22) 58%,
-        rgba(2,4,7,0.82) 100%
-      ),
-      linear-gradient(
-        180deg,
-        rgba(2,4,7,0.18) 0%,
-        rgba(2,4,7,0.00) 44%,
-        rgba(2,4,7,0.84) 100%
-      ),
-      url("/wallpapers/axyro_blue_horizon_v2_4kd.png");
+  transition:
+    transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2,4,7,0.82) 0%,
+      rgba(2,4,7,0.58) 32%,
+      rgba(2,4,7,0.14) 58%,
+      rgba(2,4,7,0.82) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2,4,7,0.18) 0%,
+      rgba(2,4,7,0.00) 44%,
+      rgba(2,4,7,0.84) 100%
+    ),
+    url("/wallpapers/axyro_blue_horizon_v2_4kd.png");
 
-    filter:
-      brightness(0.82)
-      contrast(1.06)
-      saturate(0.82);
+  background-size: cover;
+  background-position: center 76%;
+  background-repeat: no-repeat;
 
-    transform: scale(1.012);
+  filter:
+    brightness(0.90)
+    contrast(1.04)
+    saturate(0.82);
 
-    animation:
-      heroDrift 28s ease-in-out infinite alternate;
+  transform: scale(1.12);
+
+  animation:
+    heroDrift 48s ease-in-out infinite alternate;
+}
+
+ @keyframes heroDrift {
+  0% {
+    transform:
+      scale(1.11)
+      translate3d(0px, 0px, 0px);
   }
 
-  @keyframes heroDrift {
-    0% {
-      transform:
-        scale(1.01)
-        translate3d(0px, 0px, 0px);
-    }
-
-    100% {
-      transform:
-        scale(1.045)
-        translate3d(-12px, -6px, 0px);
-    }
+  100% {
+    transform:
+      scale(1.13)
+      translate3d(-4px, -2px, 0px);
   }
+}
 
   .haze {
     position: absolute;
@@ -95,7 +99,7 @@
     background:
       radial-gradient(
         ellipse at 54% 48%,
-        rgba(167,216,255,0.11),
+        rgba(167,216,255,0.06),
         transparent 32%
       ),
       radial-gradient(
@@ -107,15 +111,15 @@
         180deg,
         transparent 0%,
         rgba(2,4,7,0.18) 62%,
-        rgba(2,4,7,0.82) 100%
+        rgba(2,4,7,0.72) 100%
       );
 
-    opacity: 0.58;
+    opacity: 0.28;
 
     pointer-events: none;
   }
 
-  .hero::before {
+  .hero .vignette {
     content: "";
 
     position: absolute;
@@ -133,32 +137,52 @@
   }
 
   .hero::after {
-    content: "";
+  content: "";
 
-    position: absolute;
-    left: 50%;
-    bottom: 164px;
-    z-index: 2;
+  position: absolute;
+  left: 50%;
+  bottom: 164px;
+  z-index: 2;
 
-    width: 58vw;
-    max-width: 980px;
-    height: 1px;
+  width: 58vw;
+  max-width: 980px;
+  height: 1px;
 
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 
-    background:
-      linear-gradient(
-        90deg,
-        transparent,
-        rgba(167,216,255,0.24),
-        transparent
-      );
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(167,216,255,0.24),
+      transparent
+    );
 
-    opacity: 0.22;
+  opacity: 0.08;
 
-    pointer-events: none;
-  }
+  pointer-events: none;
+}
+.hero::before {
+  content: "";
 
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 240px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2,4,7,0),
+      #030712 88%
+    );
+
+  z-index: 1;
+
+  pointer-events: none;
+}
   .hero-content {
     position: relative;
     z-index: 3;
@@ -166,8 +190,8 @@
     width: min(980px, 90vw);
     max-width: 760px;
 
-    margin-left: clamp(32px, 7vw, 132px);
-    margin-top: 18px;
+    margin-left: clamp(42px, 8vw, 164px);
+    margin-top: 34px;
 
     will-change: transform;
   }
@@ -185,12 +209,12 @@
   h1 {
     margin: 0;
 
-    max-width: 720px;
+    max-width: 760px;
 
-    font-size: clamp(64px, 7vw, 118px);
+   font-size: clamp(58px, 6.4vw, 104px);
     line-height: 0.88;
-    letter-spacing: -0.075em;
-    font-weight: 520;
+    letter-spacing: -0.055em;
+    font-weight: 340;
 
     color: rgba(245,247,250,0.98);
   }
@@ -203,7 +227,7 @@
     font-size: 19px;
     line-height: 1.72;
 
-    color: rgba(245,247,250,0.62);
+   color: rgba(245,247,250,0.58);
   }
 
   .actions {
@@ -270,9 +294,9 @@
 
   @media (max-width: 720px) {
     .hero {
-      min-height: 640px;
+      min-height: 580px;
 
-      padding-top: 132px;
+     padding-top: 82px;
     }
 
     .hero-content {
@@ -309,14 +333,25 @@
 </style>
 
 <script is:inline>
-  const hero = document.querySelector(".hero-content");
+  const hero = document.querySelector(".hero");
+  const bg = document.querySelector(".hero-bg");
 
-  if (hero) {
-    window.addEventListener("scroll", () => {
-      const offset = window.scrollY * 0.12;
+  if (hero && bg) {
+    hero.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 8;
+      const y = (e.clientY / window.innerHeight - 0.5) * 8;
 
-      hero.style.transform =
-        `translate3d(0, ${offset}px, 0)`;
+      bg.style.transform = `
+        scale(1.12)
+        translate3d(${x * 0.4}px, ${y * 0.4}px, 0)
+      `;
+    });
+
+    hero.addEventListener("mouseleave", () => {
+      bg.style.transform = `
+       scale(1.11)
+        translate3d(0px, 0px, 0px)
+      `;
     });
   }
 </script>

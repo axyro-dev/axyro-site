@@ -1,0 +1,173 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Reduce noise — AXYRO">
+  <main class="article-page">
+    <section class="article-hero">
+      <p class="eyebrow">JOURNAL / EARTH PHASE</p>
+
+      <span class="index">01</span>
+
+      <h1>Reduce noise.</h1>
+
+      <p class="sub">
+        Why focused systems begin with silence.
+      </p>
+    </section>
+
+    <article class="article-body">
+      <p>
+        A system does not become calmer by adding more control.
+        It becomes calmer when unnecessary visual pressure is removed.
+      </p>
+
+      <p>
+        AXYRO begins with the environment layer because attention is shaped
+        before interaction begins. Darkness, space and restraint create the
+        first condition for focus.
+      </p>
+
+      <p>
+        Noise is not only sound. It is contrast, motion, density, urgency,
+        excessive color and visual interruption.
+      </p>
+
+      <p>
+        Reduce noise, and the system starts to feel faster.
+        Not because the machine changed, but because cognition has less to fight.
+      </p>
+    </article>
+
+    <section class="article-footer">
+      <a href="/journal">← Back to journal</a>
+      <span>AXYRO JOURNAL / 01</span>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .article-page {
+    min-height: 100vh;
+    background:
+      radial-gradient(
+        circle at 72% 18%,
+        rgba(167,216,255,0.025),
+        transparent 36%
+      ),
+      linear-gradient(
+        180deg,
+        #020407 0%,
+        #030712 100%
+      );
+  }
+
+  .article-hero {
+    padding:
+       260px
+         clamp(32px, 8vw, 160px)
+         120px;
+  }
+
+  .eyebrow {
+    margin: 0 0 42px;
+    font-size: 11px;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    color: rgba(167,216,255,0.68);
+  }
+
+  .index {
+    display: block;
+    margin-bottom: 34px;
+    font-size: 11px;
+    letter-spacing: 0.38em;
+    color: rgba(245,247,250,0.22);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(72px, 8vw, 132px);
+    line-height: 0.9;
+    letter-spacing: -0.08em;
+    font-weight: 430;
+    color: rgba(245,247,250,0.96);
+  }
+
+  .sub {
+    margin-top: 34px;
+    max-width: 620px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: rgba(245,247,250,0.52);
+  }
+
+  .article-body {
+    max-width: 680px;
+    margin-left: clamp(32px, 8vw, 160px);
+    padding:
+      40px
+      0
+      120px;
+  }
+
+  .article-body p {
+    margin: 0 0 38px;
+    font-size: clamp(24px, 2.2vw, 34px);
+    line-height: 1.42;
+    letter-spacing: -0.035em;
+    font-weight: 360;
+    color: rgba(245,247,250,0.82);
+  }
+
+  .article-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+
+    padding:
+       64px
+       clamp(32px, 8vw, 160px)
+       96px;
+
+    border-top:
+      1px solid rgba(255,255,255,0.04);
+  }
+
+  .article-footer a,
+  .article-footer span {
+    font-size: 10px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: rgba(245,247,250,0.32);
+    text-decoration: none;
+  }
+
+  .article-footer a:hover {
+    color: rgba(167,216,255,0.72);
+  }
+
+  @media (max-width: 720px) {
+    .article-hero {
+      padding:
+        170px
+        24px
+        76px;
+    }
+
+    .article-body {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+
+    .article-footer {
+      flex-direction: column;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    h1 {
+      font-size: clamp(60px, 16vw, 88px);
+    }
+  }
+</style>

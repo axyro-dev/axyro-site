@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 
 const { title = "AXYRO" } = Astro.props;
@@ -11,27 +12,23 @@ const { title = "AXYRO" } = Astro.props;
     <meta name="viewport" content="width=device-width" />
 
     <title>{title}</title>
-<link rel="icon" type="image/png" href="/favicon-32x32.png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
 
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#05070A" />
+<meta name="theme-color" content="#05070A" />
 
-  <meta property="og:title" content="AXYRO" />
-  <meta property="og:description" content="A quieter way to interact with machines." />
-  <meta property="og:image" content="https://axyro.io/og-image.png" />
-  <meta property="og:url" content="https://axyro.io" />
-  <meta property="og:type" content="website" />
+<meta property="og:title" content="AXYRO" />
+<meta property="og:description" content="A quieter way to interact with machines." />
+<meta property="og:image" content="https://axyro.io/og-image.png" />
+<meta property="og:url" content="https://axyro.io" />
+<meta property="og:type" content="website" />
 
-
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <meta name="twitter:title" content="AXYRO" />
-  <meta name="twitter:description" content="A quieter way to interact with machines." />
-  <meta name="twitter:image" content="https://axyro.io/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AXYRO" />
+<meta name="twitter:description" content="A quieter way to interact with machines." />
+<meta name="twitter:image" content="https://axyro.io/og-image.png" />
 
     <style is:global>
       :root {
@@ -80,7 +77,11 @@ const { title = "AXYRO" } = Astro.props;
 
       html,
       body {
-        margin: 0;
+         position: relative;
+         text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+         margin: 0;
 
         background:
           radial-gradient(
@@ -144,7 +145,7 @@ const { title = "AXYRO" } = Astro.props;
         pointer-events: none;
         z-index: 0;
 
-        opacity: 0.18;
+        opacity: 0.10;
 
         background:
           linear-gradient(
@@ -172,8 +173,8 @@ const { title = "AXYRO" } = Astro.props;
         transform: translateY(18px);
 
         transition:
-          opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-          transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+          opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
       .reveal.visible {
@@ -335,5 +336,6 @@ const { title = "AXYRO" } = Astro.props;
         observer.observe(el);
       });
     </script>
+
   </body>
 </html>

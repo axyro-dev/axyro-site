@@ -136,25 +136,28 @@
   }
 
   .environments::before {
-    content: "";
+  content: "";
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 42%;
+  position: absolute;
+  inset: 0;
 
-    height: 1px;
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(142,223,255,0.028),
+      transparent 42%
+    ),
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(255,255,255,0.008),
+      transparent
+    );
 
-    background:
-      linear-gradient(
-        90deg,
-        transparent,
-        rgba(167,216,255,0.08),
-        transparent
-      );
+  opacity: 0.7;
 
-    opacity: 0.34;
-  }
+  pointer-events: none;
+}
 
   .heading {
     position: relative;
@@ -212,7 +215,7 @@
 
   .card {
     position: relative;
-
+    isolation: isolate;
     display: block;
 
     overflow: hidden;
@@ -230,12 +233,13 @@
       );
 
     border:
-     1px solid rgba(255,255,255,0.024);
+      1px solid rgba(255,255,255,0.014);
 
     transition:
       transform 0.8s cubic-bezier(.19, 1, .22, 1),
       border-color 0.7s ease,
       box-shadow 0.7s ease;
+      
   }
 
   .card:nth-child(1) {
@@ -258,6 +262,7 @@
     margin-top: 92px;
   }
 
+
  .cards::before {
   content: "";
 
@@ -272,6 +277,25 @@
     );
 
   pointer-events: none;
+}
+
+.card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.03),
+      transparent 28%
+    );
+
+  opacity: 0.24;
+
+  pointer-events: none;
+  z-index: 2;
 }
   .card::after {
     content: "";
@@ -300,15 +324,15 @@
   }
 
  .card:hover {
-  transform:
-    translateY(-6px);
+   transform:
+    translateY(-2px);
 
   border-color:
-    rgba(167,216,255,0.065);
+    rgba(167,216,255,0.04);
 
   box-shadow:
-    0 18px 54px rgba(0,0,0,0.22),
-    0 0 24px rgba(167,216,255,0.016);
+    0 12px 38px rgba(0,0,0,0.18),
+    0 0 18px rgba(167,216,255,0.01);
 }
 
   .axyro-image {
@@ -329,11 +353,11 @@
     object-position: center;
 
     filter:
-      brightness(0.82)
-      contrast(1.06)
-      saturate(0.82);
+       brightness(0.9)
+       contrast(1.04)
+       saturate(0.86);
 
-    transform: scale(1.04);
+   transform: scale(1.025);
 
     transition:
       transform 1.8s cubic-bezier(.19, 1, .22, 1),
@@ -343,14 +367,14 @@
   .card:nth-child(3) img,
   .card:nth-child(4) img {
     filter:
-      brightness(0.78)
-      contrast(1.08)
-      saturate(0.70);
+      brightness(0.82)
+      contrast(1.05)
+      saturate(0.74);
   }
 
   .card:hover img {
     transform:
-      scale(1.05);
+      scale(1.035);
 
     filter:
       brightness(0.9)
@@ -363,7 +387,7 @@
 
     left: 30px;
     right: 30px;
-    bottom: 40px;
+    bottom: 34px;
 
     z-index: 4;
   }
@@ -380,8 +404,8 @@
   }
 
   h3 {
-    margin-top: 16px;
-    margin-bottom: 12px;
+    margin-top: 18px;
+    margin-bottom: 14px;
 
     font-size:
       clamp(26px, 2vw, 34px);
@@ -445,9 +469,11 @@
     }
 
     h2 {
-      font-size:
-        clamp(48px, 13vw, 68px);
-    }
+  font-size: clamp(44px, 12vw, 62px);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+  font-weight: 420;
+   }
 
     .right p {
       font-size: 17px;
